@@ -1,0 +1,13 @@
+{
+  "name": "node-proxy-checker",
+  "version": "1.0.0",
+  "description": "Module which checks a big number of proxy servers.",
+  "main": "index.js",
+  "author": "Sébastien Castiel <sebastien.castiel@gmail.com>",
+  "license": "LGPL",
+  "dependencies": {
+    "readline": "0.0.3",
+    "request": "^2.36.0",
+    "stream": "0.0.1"
+  }
+}

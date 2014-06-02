@@ -6,6 +6,12 @@
   "author": "Sébastien Castiel <sebastien.castiel@gmail.com>",
   "homepage": "https://github.com/scastiel/node-proxy-checker",
   "license": "LGPL",
+  "keywords": [
+        "proxy",
+        "checker",
+        "proxy server",
+        "proxies"
+    ],
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/scastiel/node-proxy-checker.git"

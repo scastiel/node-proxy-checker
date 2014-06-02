@@ -1,5 +1,5 @@
 {
-  "name": "node-proxy-checker",
+  "name": "proxy-checker",
   "version": "1.0.0",
   "description": "Module which checks a big number of proxy servers.",
   "main": "index.js",

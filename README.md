@@ -36,12 +36,13 @@ proxyChecker.checkProxiesFromFile(
 ```
 
 The file you pass as first parameter contains the proxy servers to test. Here is
-an example :
+an example:
 
 ```
 123.234.321.32:80
 12.234.21.243:8080
-132.34.212.4:8080
+132.34.212.4:3128
+#127.32.76.123:80 <= This line will be ignored
 ```
 
 Note that thanks to the [Readline](http://nodejs.org/api/readline.html) API,

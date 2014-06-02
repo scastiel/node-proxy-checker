@@ -4,7 +4,12 @@
   "description": "Module which checks a big number of proxy servers.",
   "main": "index.js",
   "author": "Sébastien Castiel <sebastien.castiel@gmail.com>",
+  "homepage": "https://github.com/scastiel/node-proxy-checker",
   "license": "LGPL",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/scastiel/node-proxy-checker.git"
+  },
   "dependencies": {
     "readline": "0.0.3",
     "request": "^2.36.0",

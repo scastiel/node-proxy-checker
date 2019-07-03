@@ -27,7 +27,8 @@ var readProxiesFromFile = function(file, callback) {
  * @param options   Options to check if the proxy is accessible. It's an object {
  *                      url: the complete URL to check the proxy,
  *                      regex: an optional regex to check for the presence of some text on the page
- * 						https: Whether the proxy supports HTTPS or not
+ * 						https: Whether the proxy supports HTTPS or not,
+ * 						timeout - integer containing the number of milliseconds to wait for a server to send response headers (and start the response body) before aborting the request.
  *                  }.
  * @param callback Callback function to be called after the check. Parameters:
  *                      host: host of the proxy
@@ -42,7 +43,13 @@ var checkProxy = function(host, port, options, callback) {
 	var proxyRequest = request.defaults({
 		proxy: protocol + '://' + host + ':' + port
 	});
-	proxyRequest(options.url, function(err, res) {
+
+	var reqOptions = { url: options.url };
+	if (typeof options.timeout == 'number') {
+		reqOptions.timeout = options.timeout
+	}
+
+	proxyRequest(reqOptions, function(err, res) {
 		if( err ) {
 			callback(host, port, false, -1, err);
 		} else if( res.statusCode != 200 ) {
